@@ -47,24 +47,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# NEXT STEP:
-# Want to count the number of occurrences of a digit in each element of our new_list
-# Only want to count the most significant digit
-# EXAMPLE: for 1, we want to see how many times 1 occurs as the left-most digits in each element
-# Do this for each number up to 9 and then graph it 
