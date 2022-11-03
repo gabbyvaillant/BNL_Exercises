@@ -9,6 +9,8 @@ import os
 import sys
 import scipy.integrate
 
+# TASK: Create a Python program called eulers_constant.py that uses SciPy to numerically estimate Euler's Constant.
+# Then use pyplot to superimpose a line graph of 𝛾+ln⁡(𝑥) on top of a step plot of the first 50 Harmonic Numbers
 
 def harmonic_nums(n):
     h = 0
