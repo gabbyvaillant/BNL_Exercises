@@ -10,7 +10,7 @@ import sys
 
 # Write the PDF:
 # I did this in parts because it was easier for me to make sure I inputted it correctly
-def my_dist(x, a):
+def max_boltz(x, a):
     part_1 = np.sqrt(2 / np.pi)
     part_2 = (x**2) * (np.exp((-(x**2)) / (2 * (a**2))))
     part_3 = (part_2) / (a**3)
@@ -25,9 +25,9 @@ def plot(ax):
     a_3 = 5
 
     x = np.linspace(a, b)
-    y_1 = my_dist(x, a_1)
-    y_2 = my_dist(x, a_2)
-    y_3 = my_dist(x, a_3)
+    y_1 = max_boltz(x, a_1)
+    y_2 = max_boltz(x, a_2)
+    y_3 = max_boltz(x, a_3)
 
     ax.set_title(f"Maxwell-Boltzmann Distribution")
     ax.set_xlabel("x")
