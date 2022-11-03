@@ -1,36 +1,29 @@
 #!/usr/bin/env python3
 # benfords_law.py
-
 import matplotlib.pyplot as plt
 import os
 import sys
 import random
 
-random_list = random.sample(range(1, 1_000_000), 100_000) # generate desired list of numbers
 
-def raise_tenth(list):
-    return [i ** 100 for i in list] # raise every element to the 100th power
-
-new_list = raise_tenth(random_list) # declare it a new name
-
-counting = [] # initialize a empty list
-
-for i in new_list:
-    aux = str(i)  # placeholder variable to modify each element i into a string
-    counting.append(int(aux[0])) # add the first digit of each element to our counting list
+def create_list():
+    random_list = random.sample(range(1, 1_000_000), 100_000) # generate desired list of numbers
+    return [i ** 100 for i in random_list] # raise to the 100th power
 
 
-def prob(list):
-    return [n / 100_000 for n in list]
+def count(list):
+    counting = [] # initialize a empty list
+    for i in list:
+        aux = str(i)  # placeholder variable to modify each element i into a string
+        counting.append(int(aux[0])) # add the first digit of each element to our counting list
+    return counting
 
 
-a = counting  # the data is the amount of times each number appears
-b = [1,2,3,4,5,6,7,8,9,10]
- 
-
-# Creating histogram
+# Creating Histogram:
 def plot(ax):
-    ax.hist(a, bins = b, density = True)
+    a = count(create_list())  # the list of the first digits
+    b = [1,2,3,4,5,6,7,8,9,10] # different possibilities of digits
+    ax.hist(a, bins = b, color = "maroon", density = "True") # need to fix the bar graph
     ax.set_title(f"Benford's Law")
     plt.ylabel('Probability')
     plt.xlabel('Leading Digit')
