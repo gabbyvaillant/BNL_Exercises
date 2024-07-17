@@ -1,4 +1,4 @@
-# Python Exercises
+# **Python Exercises**
 
-# Introduction
+## Introduction
 This repository contains coding exercises I completed duirng my internship appointment at Brookhaven National Laboratory.
